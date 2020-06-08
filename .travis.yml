@@ -28,6 +28,7 @@ matrix:
 before_install:
   - export TRAVIS_TAG="1.0.$TRAVIS_BUILD_NUMBER"
   - export SO_DIR="${TRAVIS_TAG}_${PLAT}_compiled_so"
+  - chmod 755 travis_linux_steps.sh
 
 install:
   - docker pull $DOCKER_IMAGE
